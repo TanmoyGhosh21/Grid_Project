@@ -1,0 +1,244 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+html,body{
+  width: 100%;
+  height: 100%;
+}
+
+body .main{
+  width: 100%;
+  height: 100%;
+  background-color: #ededed;
+  display: grid;
+  grid-template-columns:25% 25% 50%;
+  grid-template-rows:35% 50% 15%;
+  position: relative;
+  border: 20px  solid black;
+}
+
+
+
+
+
+body .main .left-top-left{
+  /* background-color: red; */
+  padding: 20px;
+}
+
+body .main .left-top-left .square{
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  rotate: 45deg;
+}
+
+
+body .main .left-top-right{
+  /* background-color: green; */
+  text-align: right;
+  padding: 20px;
+}
+
+body .main .left-top-right h4{
+  margin-bottom: 50px;
+  font-size: 1rem;
+  color: rgb(90, 84, 84);
+}
+
+body .main .left-top-right h5{
+  font-size: 0.8rem;
+  color: rgb(90, 84, 84);
+}
+
+body .main .left-top-right h6{
+  visibility: hidden;
+}
+
+body .main .left-center{
+  /* background-color: purple; */
+  grid-row: 2/3;
+  grid-column: 1/3;
+  padding:5px;
+  padding-left: 8rem;
+}
+
+body .main .left-center h1{
+  text-transform: uppercase;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 6.5vw;
+  font-weight:500;
+  line-height: 4.5rem; 
+  
+}
+
+body .main .left-center h1:nth-child(2n){
+  /* background-color: red; */
+  text-align: center;
+}
+
+body .main .left-bottom{
+  /* background-color: orange; */
+  grid-row: 3;
+  grid-column: 1/3;
+  padding: 20px;
+}
+
+body .main .right{
+  /* background-color: teal; */
+  grid-column: 3/4;
+  grid-row: 1/4;
+  /* padding: 25px; */
+  display: flex;
+  justify-content:start;
+  align-items:center;
+}
+
+body .main .right video{
+  width: 70%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+body .main .aero{
+  width: 60px;
+  height: 60px;
+  background-color: rgb(255, 94, 0);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+@media (max-width:600px) {
+  
+  body .main{
+    
+    display: grid;
+    grid-template-columns:50% 50%;
+    grid-template-rows:8% 30% 12% 50%;
+    position: relative;
+    border: 20px  solid black;
+  }
+  
+  
+  
+  
+  
+  body .main .left-top-left{
+    padding: 20px;
+  }
+  
+  body .main .left-top-left .square{
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    rotate: 45deg;
+  }
+  
+  
+  body .main .left-top-right{
+    /* background-color: green; */
+    text-align: right;
+    padding: 20px;
+  }
+  
+  body .main .left-top-right h4{
+    margin-bottom: 50px;
+    font-size: 1rem;
+    color: rgb(90, 84, 84);
+    display: none;
+  }
+  
+  body .main .left-top-right h5{
+    font-size: 0.8rem;
+    color: rgb(90, 84, 84);
+    display: none;
+  }
+
+  body .main .left-top-right h6{
+    visibility: visible;
+  }
+  
+  body .main .left-center{
+    /* background-color: purple; */
+    grid-row: 2/3;
+    grid-column: 1/3;
+    padding:5px;
+    padding-left:6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  body .main .left-center h1{
+    text-transform: uppercase;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 8.5vw;
+    font-weight:800;
+    line-height: 1.5rem; 
+    
+  }
+  
+  body .main .left-center h1:nth-child(2n){
+    /* background-color: red; */
+    text-align: center;
+  }
+  
+  body .main .left-bottom{
+    /* background-color: orange; */
+    grid-row: 3;
+    grid-column: 1/3;
+    padding: 10px;
+    text-align: left;
+    font-size: 0.9rem;
+  }
+  
+  body .main .right{
+    /* background-color: teal; */
+    grid-column:1/3;
+    grid-row:4;
+    /* padding: 25px; */
+    display: flex;
+    justify-content:center;
+    align-items:self-start;
+  }
+  
+  body .main .right video{
+    width: 80%;
+    height: 95%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    border: none;
+  }
+  
+  body .main .aero{
+    width: 60px;
+    height: 60px;
+    background-color: rgb(255, 94, 0);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%) rotate(90deg);
+  }
+
+}
